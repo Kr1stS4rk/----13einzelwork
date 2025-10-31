@@ -59,7 +59,6 @@ img {
 }
 
 html {
-
   margin: 0 auto;
 }
 body {
@@ -258,7 +257,7 @@ body {
   position: relative;
   white-space: nowrap;
 }
-.link-hover:hover:before {
+.link-hover:hover::before {
   transform-origin: 0% 50%;
   transform: scale3d(1, 1, 1);
 }
@@ -268,7 +267,6 @@ body {
   transform: scale3d(0, 1, 1);
   transition: transform 0.3s;
   content: "";
-
   display: block;
   width: 100%;
   height: 1px;
@@ -473,55 +471,83 @@ body {
   font-weight: 400;
   line-height: 100%;
 }
-.blog .blog__item .item__info .item__date{font-family: Montserrat ;}
-.blog .item 
-        .item__title {
-            font-weight: 400;
-            font-size: 20px;
-            line-height: 145%;}
-            .item__author{display: flex;align-items: center;gap:16px}
-.blog .item .item__photo{
+.blog .blog__item .item__info .item__date {
+  font-family: Montserrat;
+}
+.blog .item .item__title {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 145%;
+}
+.item__author {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.blog .item .item__photo {
   position: relative;
   width: 60px;
   height: 60px;
 }
-.blog .item .item__photo img{
+.blog .item .item__photo img {
   position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: 999px;
-                transition: 0.3s;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 999px;
+  transition: 0.3s;
 }
-        .item__name
-
- {
-            font-family: Montserrat;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 100%;
-            letter-spacing: 0%;
-            opacity: 0.6;
-        }
-     .item__photo::before {
+.item__name {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  opacity: 0.6;
+}
+.item__photo::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0);
+  background: rgba(0, 0, 0, 0);
   transition: 0.3s;
 }
 
 .item__photo:hover::before {
-  background: rgba(0,0,0,0.4); /* затемнение при hover */
-
+  background: rgba(0, 0, 0, 0.4); /* затемнение при hover */
 }
 .item__photo:hover img {
   border: red;
   transform: scale(1.1); /* лёгкий зум */
 }
-            /* media  */
+.root .footer {
+    flex: 1 1 0%;
+    padding: 32px 0px;
+    font-family: Montserrat;}
+    .root .footer {
+    flex: 0 0 0%;
+}
+.footer .footer__copyright span{
+ font-family: "Montserrat", sans-serif;
+}
+.root .footer__copyright .copyright__icon {
+    margin: 0px 8px;}
+     .footer__copyright span {
+    opacity: 0.6;
+    font-size: 0.875em;}
+    .social__item {
+    padding-left: 24px;}
+    .footer .link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;}
+    .root .footer__socials .social__item {
+    margin: 0px 24px 0px 0px;}
+    .root .footer__socials .social__item:last-child {
+    margin: 0px;}
+/* media  */
 @media (min-width: 768px) {
   .menu__list {
     color: rgba(241, 241, 241, 1);
