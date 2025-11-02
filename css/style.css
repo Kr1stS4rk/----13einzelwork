@@ -72,6 +72,7 @@ body {
 }
 .container {
   max-width: 1750px;
+  width: 100%;
   margin: auto;
   padding-left: 16px !important;
   padding-right: 16px !important;
@@ -128,6 +129,9 @@ body {
   position: relative;
   z-index: 2;
   padding: 36px 67px 40px 36px;
+}
+.root .header .header__logo {
+  width: 147px;
 }
 .card__item {
   padding: 36px;
@@ -342,6 +346,10 @@ body {
   flex: 0 0 auto;
   width: calc(50% - 12px);
 }
+.portfolio__item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;}
 .portfolio__item a {
   display: block;
   position: relative;
@@ -449,6 +457,20 @@ body {
   flex-direction: column;
   gap: 32px;
 }
+.blog .blog__item .item__img {
+            position: relative;
+            width: 100%;
+            height: 300px;
+}
+.blog .blog__item .item__img img{position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 16px;}
+
+
 .blog .item .item__info {
   display: flex;
   flex-direction: column;
@@ -540,7 +562,7 @@ body {
   opacity: 0.6;
   font-size: 0.875em;
 }
-.social__item {
+.footer .footer__copyright .social__item {
   padding-left: 24px;
 }
 .footer .link {
@@ -555,6 +577,7 @@ body {
   margin: 0px;
 }
 /* media  */
+
 @media (min-width: 768px) {
   .menu__list {
     color: rgba(241, 241, 241, 1);
@@ -628,5 +651,121 @@ body {
   .menu__subitem {
     cursor: pointer;
     transition: all 0.3s ease 0s;
+  }
+}
+@media (max-width: 1600px) {
+  .root .header {
+    padding: 40px 0px;
+  }
+  .root .main .card__wrapper {
+    grid-template-columns: 1.64fr 1fr 1.24fr;
+  }
+  .root .main .card__wrapper .card-1 {
+    padding: 24px;
+  }
+
+  .root .main .card__wrapper .card-2 {
+    padding: 24px;
+  }
+  .root .main .card__wrapper .card-3 {
+    grid-row: auto;
+  }
+
+  .root .main .card__wrapper .card-4 {
+    grid-row: auto;
+  }
+  .root .main .card__wrapper .card-1 .list__wrapper {
+    margin: 16px 0 0;
+  }
+  .root .main .card__wrapper .card__item .location__wrapper .location__item {
+    margin: 0 0 12px 0;
+  }
+
+  .root .main .card__wrapper .card-1 .item__title {
+    font-size: 2em;
+  }
+  .root .main .card__wrapper .card__item .item__description {
+    font-size: 1em;
+  }
+  .root .main .card__wrapper .card-1 .list__wrapper .list .list__item {
+    font-size: 1em;
+  }
+  .root .main .card__wrapper .card-1 .column__list .list .list__item {
+    font-size: 1em;
+  }
+  .root .main .card__wrapper .card-4 .video__wrapper .inner__video {
+    height: 344px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .container {
+    width: 100%;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+  .root .main .card__wrapper .card__item .title__icon svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+@media (max-width: 1140px) {
+  .root .header {
+    padding: 25px 0;
+  }
+  .root .main .card__wrapper {
+    grid-template-columns: 1.26fr 1fr min-content;
+  }
+  .root .main .card__wrapper .card-1 {
+    padding: 20px;
+  }
+  .root .main .card__wrapper .card-1 .item__title {
+    font-size: 1.375em;
+  }
+  .root .main .card__wrapper .card-1 .column__list {
+    margin: 24px 0 0;
+  }
+  .root .main .card__wrapper .card__item .title__icon {
+    margin: 0 0 18px 0;
+  }
+  .root .main .card__wrapper .card-1 .list__wrapper .list .list__item {
+    font-size: 0.875em;
+    line-height: 150%;
+  }
+
+ .card__item .item__decription {
+    font-size: 0.9375em;
+  }
+  .root .main .card__wrapper .card-1 .column__list .list .list__item {
+    font-size: 0.875em;
+  }
+  .root .main .card__wrapper .card-1 .column__list .list__title {
+    font-size: 0.75em;
+  }
+  .root .main .card__wrapper .card__item .title__icon .item__title {
+    font-size: 0.75em;
+  }
+  .root .main .card__wrapper .card__item .item__description {
+    font-size: 0.9375em;
+  }
+  .root
+    .main
+    .card__wrapper
+    .card__item
+    .location__wrapper
+    .location__item
+    .text {
+    font-size: 1em;
+  }
+
+  .root .main .card__wrapper .card-4 .video__wrapper .inner__video {
+    height: 100%;
+  }
+      .root .footer .social__item {
+        font-size: .875em;
+}}
+@media (max-width: 768px) {
+  .root .header {
+    padding: 16px 0 22px 0;
   }
 }
